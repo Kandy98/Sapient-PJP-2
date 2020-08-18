@@ -31,3 +31,7 @@ return 0;
 
 
 # adding new line so that I can revert them again 
+
+# checkin - stages - commit - push 
+
+
