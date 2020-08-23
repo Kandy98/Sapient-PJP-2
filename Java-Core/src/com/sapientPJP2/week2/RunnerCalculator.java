@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Calendar;
 
 public class RunnerCalculator {
@@ -34,7 +35,8 @@ public class RunnerCalculator {
 		System.out.println("Option 4 - Determine the Week number for a given a date");
 		System.out.println("Option 5 - Adding two dates");
 		System.out.println("Option 6 - See the History of all operations performed");
-		System.out.println("Option 7 - Close the file");
+		System.out.println("Option 7 - Wants to enter the NLP phrase ?");
+		System.out.println("Option 8 - Close the file");
 		System.out.println("Enter the option you want to choose :");
 		
 		Scanner scan = new Scanner(System.in);
@@ -308,6 +310,105 @@ public class RunnerCalculator {
 			 br.close();
 		}
 		else if(inputOption == 7) {
+			
+			System.out.println("Enter the NLP phrase :");
+			Scanner sc = new Scanner(System.in);
+	        String phrase = sc.nextLine();
+			String filename= "history.txt";
+		    FileWriter fw = new FileWriter(filename,true);
+			
+			LocalDate currDate = LocalDate.now();
+			fw.write("Input Option 7 : NLP Phrase conversion : "+ phrase + " \n");
+			
+			if(phrase.equals("today")) {
+				System.out.println(currDate);
+			}		
+			else if(phrase.equals("tomorrow")) {
+				System.out.println(currDate.plusDays(1));
+			}
+			else if(phrase.equals("day after tomorrow")) {
+				System.out.println(currDate.plusDays(2));
+			}
+			else if(phrase.equals("yesterday")) {
+				System.out.println(currDate.minusDays(1));
+			}
+			else if(phrase.equals("day before yesterday")) {
+				System.out.println(currDate.minusDays(2));
+			}
+			else if(phrase.equals("last week")) {
+				System.out.println(currDate.minusWeeks(1));
+			}
+			else if(phrase.equals("previous week")) {
+				System.out.println(currDate.minusWeeks(1));
+			}
+			
+			else if(phrase.equals("next week")) {
+				System.out.println(currDate.plusWeeks(1));
+			}
+			else if(phrase.equals("next month")) {
+				System.out.println(currDate.plusMonths(1));
+			}
+			else if(phrase.equals("next year")) {
+				System.out.println(currDate.plusYears(1));
+			}
+			else if(phrase.equals("last month")){
+				System.out.println(currDate.minusMonths(1));
+			}
+			else if(phrase.equals("last year")) {
+				System.out.println(currDate.minusYears(1));
+			}
+			else if(phrase.equals("month after")) {
+				System.out.println(currDate.plusMonths(1));
+			}
+			else if(phrase.equals("month before")) {
+				System.out.println(currDate.minusMonths(1));
+			}
+			else if(phrase.equals("weeks from now")) {
+				System.out.println("How much ?");
+				int n = scan.nextInt();
+				System.out.println(currDate.plusWeeks(n));
+			}
+			else if(phrase.equals("days from now")) {
+				System.out.println("How much ?");
+				int n = scan.nextInt();
+				System.out.println(currDate.plusDays(n));
+			}
+			else if(phrase.equals("months from now")) {
+				System.out.println("How much ?");
+				int n = scan.nextInt();
+				System.out.println(currDate.plusMonths(n));
+			}
+			else if(phrase.equals("years from now")) {
+				System.out.println("How much ?");
+				int n = scan.nextInt();
+				System.out.println(currDate.plusYears(n));
+			}
+			else if(phrase.equals("days earlier")) {
+				System.out.println("How much ?");
+				int n = scan.nextInt();
+				System.out.println(currDate.minusDays(n));
+			}
+			else if(phrase.equals("weeks earlier")) {
+				System.out.println("How much ?");
+				int n = scan.nextInt();
+				System.out.println(currDate.minusWeeks(n));
+			}
+			else if(phrase.equals("months earlier")) {
+				System.out.println("How much ?");
+				int n = scan.nextInt();
+				System.out.println(currDate.minusMonths(n));
+			}
+			else if(phrase.equals("years earlier")) {
+				System.out.println("How much ?");
+				int n = scan.nextInt();
+				System.out.println(currDate.minusYears(n));
+			}
+			fw.write("Output :" + currDate + "\n");
+			fw.write("================================================================================================"+ "\n");
+			fw.close();
+			
+		}
+		else if(inputOption == 8) {
 			System.out.println("Closing the Calculator");
 			PrintWriter pw = new PrintWriter("history.txt");
 			pw.close();
@@ -320,7 +421,8 @@ public class RunnerCalculator {
 			fw.write("Option 4 - Determine the Week number for a given a date"+"\n");
 			fw.write("Option 5 - Adding two dates"+"\n");
 			fw.write("Option 6 - See the History of all operations performed"+"\n");
-			fw.write("Option 7 - Close the file"+"\n");
+			fw.write("Option 7 - Wants to enter the NLP phrase ?");
+			fw.write("Option 8 - Close the file"+"\n");
 			fw.write("================================================================================================"+"\n");
 			fw.close();
 			System.exit(1);
