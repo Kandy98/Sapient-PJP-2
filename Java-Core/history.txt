@@ -1,0 +1,9 @@
+========================PRINTING THE HISTORY LOGS===============================================
+Option 1 - Add, Subtract between two dates and express the output in days, dates, weeks, months
+Option 3 - Determine the Day of the Week for a given date
+Option 4 - Determine the Week number for a given a date
+Option 5 - Adding two dates
+Option 6 - See the History of all operations performed
+Option 7 - Close the file
+Enter the option you want to choose :
+================================================================================================
