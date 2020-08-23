@@ -38,6 +38,8 @@ public class RunnerCalculator {
 		System.out.println("Option 7 - Wants to enter the NLP phrase ?");
 		System.out.println("Option 8 - Close the file");
 		System.out.println("Enter the option you want to choose :");
+		System.out.println("================================================================================================");
+		
 		
 		Scanner scan = new Scanner(System.in);
 		int inputOption = scan.nextInt();
@@ -89,7 +91,7 @@ public class RunnerCalculator {
 			{
 			    String filename= "history.txt";
 			    FileWriter fw = new FileWriter(filename,true);
-			    fw.write("\n"+"Input Option 1 : Date1 : "+date1 + " Date2 : "+date2 + "\n");
+			    fw.write("Input Option 1 : Date1 : "+date1 + " Date2 : "+date2 + "\n");
 			    fw.write("Output :"+ "\n");
 			    fw.write("Difference bw two dates in terms of days : "+ totalDays + "\n");
 			    fw.write("Difference bw two dates in terms of months :"+ totalMonths + " Months " + remdayMonths + " Days"+ "\n");
@@ -147,7 +149,7 @@ public class RunnerCalculator {
 				{
 				    String filename= "history.txt";
 				    FileWriter fw = new FileWriter(filename,true);
-				    fw.write("\n"+"Input Option 2 : Date : "+date + "Add N : "+ n+ "\n" );
+				    fw.write("Input Option 2 : Date : "+date + "Add N : "+ n+ "\n" );
 				    fw.write("Output :"+ "\n");
 				    if(input.equals("year"))
 				    	fw.write("New Date after adding " + n + " years : " + dt.d+"-"+dt.m+"-"+dt.y+ "\n");
@@ -167,30 +169,30 @@ public class RunnerCalculator {
 				if(input.equals("years")) {
 					cal.add(Calendar.YEAR,-1*n); 
 					newDate = sdf.format(cal.getTime()); 
-					System.out.println("New Date after substracting " + n + " years : "+newDate);
+					System.out.println("New Date after subtracting " + n + " years : "+newDate);
 				}
 				else if(input.equals("months")) {
 					cal.add(Calendar.MONTH,-1*n); 
 					newDate = sdf.format(cal.getTime());  
-					System.out.println("New Date after substracting " + n + " months : "+newDate);
+					System.out.println("New Date after subtracting " + n + " months : "+newDate);
 				}
 				else if(input.equals("days")){
 					cal.add(Calendar.DATE,-1*n); 
 					newDate = sdf.format(cal.getTime());
-					System.out.println("New Date after substracting " + n + " days : "+newDate);
+					System.out.println("New Date after subtracting " + n + " days : "+newDate);
 				}
 				try
 				{
 				    String filename= "history.txt";
 				    FileWriter fw = new FileWriter(filename,true);
-				    fw.write("\n"+"Input Option 2 : Date : "+date + "Subtract N : "+ n + "\n");
+				    fw.write("Input Option 2 : Date : "+date + "Subtract N : "+ n + "\n");
 				    fw.write("Output :"+ "\n");
 				    if(input.equals("year"))
-				    	fw.write("New Date after substracting " + n + " years : "+newDate+ "\n");
+				    	fw.write("New Date after subtracting " + n + " years : "+newDate+ "\n");
 				    else if(input.equals("months"))
-				    	fw.write("New Date after substracting " + n + " months : "+newDate+ "\n");
+				    	fw.write("New Date after subtracting " + n + " months : "+newDate+ "\n");
 				    else if(input.equals("days"))
-				    	fw.write("New Date after substracting " + n + " days : "+newDate+ "\n");
+				    	fw.write("New Date after subtracting " + n + " days : "+newDate+ "\n");
 				    fw.write("================================================================================================"+ "\n");
 				    fw.close();
 				}
@@ -218,7 +220,7 @@ public class RunnerCalculator {
 			{
 			    String filename= "history.txt";
 			    FileWriter fw = new FileWriter(filename,true);
-			    fw.write("\n"+"Input Option 3 : Date : "+date+ "\n");
+			    fw.write("Input Option 3 : Date : "+date+ "\n");
 			    fw.write("Output :"+ "\n");
 			    fw.write("Day of the week for the given date : " + cal.get(Calendar.DAY_OF_WEEK)+ "\n");
 			    fw.write("================================================================================================"+ "\n");
@@ -247,7 +249,7 @@ public class RunnerCalculator {
 			{
 			    String filename= "history.txt";
 			    FileWriter fw = new FileWriter(filename,true);
-			    fw.write("\n"+"Input Option 4 : Date : "+date+ "\n");
+			    fw.write("Input Option 4 : Date : "+date+ "\n");
 			    fw.write("Output :"+ "\n");
 			    fw.write("Week number for the given date : " + cal.get(Calendar.WEEK_OF_YEAR)+ "\n");
 			    fw.write("================================================================================================"+ "\n");
@@ -290,7 +292,7 @@ public class RunnerCalculator {
 			{
 			    String filename= "history.txt";
 			    FileWriter fw = new FileWriter(filename,true);
-			    fw.write("\n"+"Input Option 5 : Date1 : "+ date1 + " Date2 : "+date2+ "\n");
+			    fw.write("Input Option 5 : Date1 : "+ date1 + " Date2 : "+date2+ "\n");
 			    fw.write("Output :"+ "\n");
 			    fw.write("New date after adding Two dates : "+ newDate+ "\n");
 			    fw.write("================================================================================================"+ "\n");
@@ -322,88 +324,110 @@ public class RunnerCalculator {
 			
 			if(phrase.equals("today")) {
 				System.out.println(currDate);
+				fw.write("Output :" + currDate + "\n");
 			}		
 			else if(phrase.equals("tomorrow")) {
 				System.out.println(currDate.plusDays(1));
+				fw.write("Output :" + currDate.plusDays(1) + "\n");
 			}
 			else if(phrase.equals("day after tomorrow")) {
 				System.out.println(currDate.plusDays(2));
+				fw.write("Output :" + currDate.plusDays(2) + "\n");
 			}
 			else if(phrase.equals("yesterday")) {
 				System.out.println(currDate.minusDays(1));
+				fw.write("Output :" + currDate.minusDays(1) + "\n");
 			}
 			else if(phrase.equals("day before yesterday")) {
 				System.out.println(currDate.minusDays(2));
+				fw.write("Output :" + currDate.minusDays(2) + "\n");
 			}
 			else if(phrase.equals("last week")) {
 				System.out.println(currDate.minusWeeks(1));
+				fw.write("Output :" + currDate.minusWeeks(1) + "\n");
 			}
 			else if(phrase.equals("previous week")) {
 				System.out.println(currDate.minusWeeks(1));
+				fw.write("Output :" + currDate.minusWeeks(1) + "\n");
 			}
 			
 			else if(phrase.equals("next week")) {
 				System.out.println(currDate.plusWeeks(1));
+				fw.write("Output :" + currDate.plusWeeks(1) + "\n");
 			}
 			else if(phrase.equals("next month")) {
 				System.out.println(currDate.plusMonths(1));
+				fw.write("Output :" + currDate.plusMonths(1) + "\n");
 			}
 			else if(phrase.equals("next year")) {
 				System.out.println(currDate.plusYears(1));
+				fw.write("Output :" + currDate.plusYears(1) + "\n");
 			}
 			else if(phrase.equals("last month")){
 				System.out.println(currDate.minusMonths(1));
+				fw.write("Output :" + currDate.minusMonths(1) + "\n");
 			}
 			else if(phrase.equals("last year")) {
 				System.out.println(currDate.minusYears(1));
+				fw.write("Output :" + currDate.minusYears(1) + "\n");
 			}
 			else if(phrase.equals("month after")) {
 				System.out.println(currDate.plusMonths(1));
+				fw.write("Output :" + currDate.plusMonths(1) + "\n");
 			}
 			else if(phrase.equals("month before")) {
 				System.out.println(currDate.minusMonths(1));
+				fw.write("Output :" + currDate.minusMonths(1) + "\n");
 			}
 			else if(phrase.equals("weeks from now")) {
 				System.out.println("How much ?");
 				int n = scan.nextInt();
 				System.out.println(currDate.plusWeeks(n));
+				fw.write("Output :" + currDate.plusWeeks(n) + "\n");
 			}
 			else if(phrase.equals("days from now")) {
 				System.out.println("How much ?");
 				int n = scan.nextInt();
 				System.out.println(currDate.plusDays(n));
+				fw.write("Output :" + currDate.plusDays(n) + "\n");
 			}
 			else if(phrase.equals("months from now")) {
 				System.out.println("How much ?");
 				int n = scan.nextInt();
 				System.out.println(currDate.plusMonths(n));
+				fw.write("Output :" + currDate.plusMonths(n) + "\n");
 			}
 			else if(phrase.equals("years from now")) {
 				System.out.println("How much ?");
 				int n = scan.nextInt();
 				System.out.println(currDate.plusYears(n));
+				fw.write("Output :" + currDate.plusYears(n) + "\n");
 			}
 			else if(phrase.equals("days earlier")) {
 				System.out.println("How much ?");
 				int n = scan.nextInt();
 				System.out.println(currDate.minusDays(n));
+				fw.write("Output :" + currDate.minusDays(n) + "\n");
 			}
 			else if(phrase.equals("weeks earlier")) {
 				System.out.println("How much ?");
 				int n = scan.nextInt();
 				System.out.println(currDate.minusWeeks(n));
+				fw.write("Output :" + currDate.minusWeeks(n) + "\n");
 			}
 			else if(phrase.equals("months earlier")) {
 				System.out.println("How much ?");
 				int n = scan.nextInt();
 				System.out.println(currDate.minusMonths(n));
+				fw.write("Output :" + currDate.minusMonths(n) + "\n");
+				
 			}
 			else if(phrase.equals("years earlier")) {
 				System.out.println("How much ?");
 				int n = scan.nextInt();
 				System.out.println(currDate.minusYears(n));
+				fw.write("Output :" + currDate.minusYears(n) + "\n");
 			}
-			fw.write("Output :" + currDate + "\n");
 			fw.write("================================================================================================"+ "\n");
 			fw.close();
 			

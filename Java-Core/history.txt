@@ -7,19 +7,20 @@ Option 5 - Adding two dates
 Option 6 - See the History of all operations performed
 Option 7 - Wants to enter the NLP phrase ?Option 8 - Close the file
 ================================================================================================
-Input 7 : NLP Phrase conversion : next week 
-Output :2020-08-23
+Input Option 1 : Date1 : 13-05-2020 Date2 : 14-06-2023
+Output :
+Difference bw two dates in terms of days : 1127
+Difference bw two dates in terms of months :37 Months 1 Days
+Difference bw two dates in terms of weeks :161 Weeks 0 Days
 ================================================================================================
-Input 7 : NLP Phrase conversion : day after tomorrow 
-Output :2020-08-23
-Output :2020-08-23
+Input Option 2 : Date : 13-08-2020Subtract N : 67
+Output :
+New Date after subtracting 67 months : 2015-01-13
 ================================================================================================
-Input Option 7 : NLP Phrase conversion : next week 
-Output :2020-08-23
+Input Option 7 : NLP Phrase conversion : last week 
+Output :2020-08-16
 ================================================================================================
-Input Option 7 : NLP Phrase conversion : next year 
-Output :2020-08-23
-================================================================================================
-Input Option 7 : NLP Phrase conversion : month before 
-Output :2020-08-23
+Input Option 5 : Date1 : 25-06-2014 Date2 : 31-05-2019
+Output :
+New date after adding Two dates : 4033-12-26
 ================================================================================================
