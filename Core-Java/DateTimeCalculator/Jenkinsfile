@@ -18,10 +18,11 @@ pipeline {
                 sh 'cd Core-Java/DateTimeCalculator'
                 sh 'mvn -f Core-Java/DateTimeCalculator clean'
                 sh 'mvn -f Core-Java/DateTimeCalculator test'
+                sh 'mvn -f Core-Java/DateTimeCalculator install'
             }
             post {
                 success {
-                    junit 'target/surefire-reports/**/*.xml' 
+                    junit 'Core-Java/DateTimeCalculator/target/surefire-reports/*.xml' 
                 }
             }
         }
