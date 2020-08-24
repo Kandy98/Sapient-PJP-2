@@ -15,8 +15,9 @@ pipeline {
 
         stage ('Build') {
             steps {
-                sh 'mvn clean'
-                sh 'mvn install' 
+                sh 'cd Core-Java/DateTimeCalculator'
+                sh 'mvn -f Core-Java/DateTimeCalculator clean'
+                sh 'mvn -f Core-Java/DateTimeCalculator test'
             }
             post {
                 success {
