@@ -6,30 +6,9 @@ pipeline {
 
             steps {
                 withMaven(maven : 'apache-maven-3.6.3') {
-    
-                    sh 'cd Core-Java/DateTimeCalculator'
-       				sh 'mvn -f Core-Java/DateTimeCalculator clean'
-       				sh 'mvn -f Core-Java/DateTimeCalculator test'
-                }
-            }
-        }
+                
+                    sh 'pwd'
 
-        stage ('Testing Stage') {
-
-            steps {
-                withMaven(maven : 'apache-maven-3.6.3') {
-                    sh 'mvn -f Core-Java/DateTimeCalculator test'
-                }
-            }
-        }
-
-
-        stage ('Deployment Stage') {
-            steps {
-                withMaven(maven : 'apache-maven-3.6.3') {
-                    sh 'mvn -f Core-Java/DateTimeCalculator deploy'
-                    sh 'mvn -f Core-Java/DateTimeCalculator install'
-       				sh 'mvn -f Core-Java/DateTimeCalculator site'
                 }
             }
         }
