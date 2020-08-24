@@ -14,7 +14,7 @@ public class RunnerCalculator {
 	
 	static int monthDays[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 	
-	static class Date  
+	public static class Date  
     { 
         int d, m, y; 
         public Date(int d, int m, int y) 

@@ -11,7 +11,7 @@ public class DiffTwoDates {
 		return years / 4 - years / 100 + years / 400; 
 	} 
 	
-	static int getDifference(Date dt1, Date dt2) 
+	public static int getDifference(Date dt1, Date dt2) 
     { 
        
         int n1 = dt1.y * 365 + dt1.d; 

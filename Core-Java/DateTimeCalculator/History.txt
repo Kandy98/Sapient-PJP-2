@@ -7,3 +7,9 @@ Option 5 - Adding two dates
 Option 6 - See the History of all operations performed
 Option 7 - Wants to enter the NLP phrase ?Option 8 - Close the file
 ================================================================================================
+Input Option 1 : Date1 : 23-04-2020 Date2 : 12-04-2029
+Output :
+Difference between two dates in terms of days : 3276
+Difference between two dates in terms of months :107 Months 19 Days
+Difference between two dates in terms of weeks :468 Weeks 0 Days
+================================================================================================
