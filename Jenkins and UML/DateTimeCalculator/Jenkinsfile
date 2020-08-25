@@ -20,11 +20,6 @@ pipeline {
                 sh 'mvn -f Core-Java/DateTimeCalculator test'
                 sh 'mvn -f Core-Java/DateTimeCalculator install'
             }
-            post {
-                success {
-                    junit 'Core-Java/DateTimeCalculator/target/surefire-reports/*.xml' 
-                }
-            }
         }
     }
 }
